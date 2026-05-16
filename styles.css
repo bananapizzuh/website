@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Overload';
+    src: url('assets/fonts/overload.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Overload Burn';
+    src: url("assets/fonts/overload-burn.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wine Tahoma';
+    src: url("assets/fonts/wine-tahoma.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url("assets/images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Wine Tahoma', sans-serif;
+    color: #ddddff;
+
+    cursor: url("assets/cursor-pointer.png") 27 27, default;
+}
+
+h1 {
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Overload', sans-serif;
+    letter-spacing: 0.01em;
+    color: #ddddff;
+    -webkit-text-stroke: 0.3em black;
+    paint-order: stroke fill;
+    font-size: 1.5em;
+    text-align: center;
+    bottom: 0.1em;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.blue-text {
+    font-family: 'Overload', sans-serif;
+    letter-spacing: 0.01em;
+    background: linear-gradient(360deg, #64f2f8, #4bbcf7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: #2155f1 0.05em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+a {
+}
+
+img:active {
+    cursor: url("assets/cursor-dragging.png") 27 27, grab;
+}
+
+a:link,
+a:visited {
+    color: #64f2f8;
+}
+
+a:hover {
+    color: #4bbcf7;
+    cursor: url("assets/cursor-hand.png") 27 27, pointer;
+}
+
+@media (min-width: 1360px) {
+    .pfp-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pfp {
+        width: 255px;
+        height: 255px;
+        padding-top: 20px;
+    }
+
+    x-dialog {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 1360px) {
+    .pfp-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pfp {
+        padding-top: 20px;
+        width: min(50vw, 255px);
+        height: auto;
+    }
+
+    @media (min-width: 600px) {
+        x-dialog {
+            width: min(500px, 70vw);
+        }
+    }
+
+}
